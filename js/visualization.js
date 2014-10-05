@@ -4,7 +4,7 @@ var centered;
 
 var svg, projection, gmapProjection, path, g, gmap;
 var school_scale, school_data, activeId, choropleth_data, source_data;
-var all_data = {}, activeData = "population_total";
+var all_data = {}, population_data = {}, activeData = "population_total";
 var min_population = 100;
 var defaultColor = "#aaa";
 var chartSvg, labels, anchors, links, label_array = [], anchor_array = [];
@@ -199,15 +199,21 @@ function drawChoropleth(){
     .defer(d3.json, "data/lsoa_ne_wgs84.geojson")
     .defer(d3.csv, "data/lsoa_data.csv")
     .defer(d3.csv, "data/source.csv")
+    .defer(d3.csv, "data/north_east_lsoa_population_by_age.csv")
     .await(setUpChoropleth);
 
-  function setUpChoropleth(error, dc, choropleth,source) {
+  function setUpChoropleth(error, dc, choropleth, source, populations) {
     //clean choropleth data for display.
     choropleth_data = choropleth;
     source_data = source;
     choropleth_data.forEach(function(d) {
       all_data[d.gis_id] = d;
-      choropleth_data[d.gis_id] = +d.population_total;
+    });
+    populations.forEach(function(d) {
+      population_data[d.Code] = {
+        'population_total': d['All Ages'],
+        'population_under_19': parseInt(d['0-4']) + parseInt(d['5-9']) + parseInt(d['10-14']) + parseInt(d['15-19'])
+      };
     });
 
     gmap = new google.maps.Map(d3.select("#content").node(), {
@@ -747,6 +753,9 @@ function displayPopBox(d) {
 
   var $popbox = $("#pop-info"),
       highlighted = all_data[d.properties.gis_id];
+
+  highlighted['population_total_val'] = population_data[d.properties.gis_id]['population_total'];
+  highlighted['population_under_19'] = population_data[d.properties.gis_id]['population_under_19'];
 
   d3.select(".neighborhood").html(highlighted.NBH_NAMES);
 
