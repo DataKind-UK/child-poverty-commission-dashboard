@@ -31,7 +31,7 @@ var color_palettes = {
   // greys
   // '': [ "#f7f7f7", "#cccccc", "#969696", "#636363", "#252525"],
   // reds
-  // '': [ "#fee5d9", "#fcae91", "#fb6a4a", "#de2d26", "#a50f15"],
+  'pred': [ "#fee5d9", "#fcae91", "#fb6a4a", "#de2d26", "#a50f15"],
   // oranges
   'children': [ "#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
 };
@@ -228,7 +228,7 @@ function drawChoropleth(){
       scrollwheel: true,
       zoomControl: true,
       zoomControlOptions: {
-        position: google.maps.ControlPosition.BOTTOM_LEFT
+        position: google.maps.ControlPosition.BOTTOM_RIGHT
       }
     });
 
@@ -378,7 +378,7 @@ function changeNeighborhoodData(new_data_column) {
   var legendNumber = function(d, typeDef){
     var column = String([new_data_column]);
     if (column.split("_").pop() == 'perc'){
-      return parseInt(d * 100, 10) + "%";
+      return parseInt(d, 10) + "%";
     } else if(column.split("_").pop() == 'val'){
       num = Math.round(d);
       var number_formatter = d3.format(",");
@@ -868,7 +868,7 @@ function getDisplayValue(strNum, name, typeDef) {
 
   switch(typeDef) {
     case "perc":
-      return parseInt(num * 100, 10) + "%";
+      return parseInt(num, 10) + "%";
     case "val":
       num = Math.round(num);
       return number_formatter(parseInt(num, 10));
