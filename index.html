@@ -4,58 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Data Tools 2.0 | North East Child Poverty Commission</title>
-  <link href='//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700,700italic,italic,regular|Oswald:300,700,regular|Roboto+Condensed:300,300italic,700,700italic,italic,regular&amp;subset=latin' rel='stylesheet' type='text/css'>
+ 
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="navbar navbar-default">
-  <div class="col-lg-3 col-sm-3">
+<div class="navbar navbar-default row">
+  <div class="col-lg-2 col-sm-2">
     <a class="navbar-brand" href="http://www.nechildpoverty.org.uk/"><img src="assets/necpc-logo.png" alt="North East Child Poverty Commission"></a>
   </div>
-  <div class="col-lg-9 col-sm-9">
-    <button class="btn btn-danger pull-right hidden-xs" data-toggle="modal" data-target="#myModal">
-      How to use Data Tools 2.0
-    </button>
+  <div class="col-lg-6 col-sm-6">
     <h1>North East Child Poverty Commission</h1>
     <p class="intro">The North East Child Poverty Commission is a stakeholder group that believes that all children in the North East of England should have an equal chance in life. The Commission, which includes senior representatives from public, private and voluntary sectors, aim to be an effective lobbying, influencing and campaigning group that can help to build public support for actions that improve the lives of poor children living in the North East.</p>
-    <div class="social-media pull-right">
+     
+    <div class="social-media">
       <a href="https://twitter.com/share" class="twitter-share-button" data-text="See how children fare in your neighborhood with Data Tools 2.0" data-via="nechildpoverty">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdatatools.dcactionforchildren.org&amp;width=85&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe>
+      <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdatakind-uk.github.io/child-poverty-commission-dashboard&amp;width=85&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe>
     </div>
-    <button class="btn btn-danger pull-right visible-xs" data-toggle="modal" data-target="#myModal">
+    
+  </div>
+  <div class="col-lg-4 col-sm-4">
+  
+    <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#myModal">
       How to use Data Tools 2.0
     </button>
-    <h4><strong>Three stages in understanding child poverty are:</strong></h4>
-  </div>
-</div>
-<div id="narrative-row" class="row">
-  <div class="col-md-12">
-    <!-- <div class="row"> -->
-      <div class="col-md-4 col-lg-4 col-sm-6 col-xs-6">
-        <button data-filter="children_in_poverty_perc" type="button" class="btn btn-default btn-block one" data-rel="one">
-          <img class="hidden-xs" src="assets/button-poverty.jpg"/>
-          <h4>Causes of Poverty</h4>
-          <span class="subhead visible-sm">Among 25% of the poorest neighborhoods, more than 1 in 2 children live in poverty.</span>
-        </button>
-      </div>
-      <div class="col-md-4 col-lg-4 col-sm-6 col-xs-6">
-        <button data-filter="single_mother_families_perc" type="button" class="btn btn-default btn-block two" data-rel="two">
-          <img class="hidden-xs" src="assets/button-singlemother.jpg"/>
-          <h4>Effects of Poverty</h4>
-          <span class="subhead visible-sm">Approximately 48% (almost 1 in 2) DC children live in families headed by single mothers.</span>
-        </button>
-      </div>
-      <div class="col-md-4 col-lg-4 col-sm-6 col-xs-6">
-        <button data-filter="reading_perc" type="button" class="btn btn-default btn-block three" data-rel="three">
-          <img class="hidden-xs" src="assets/button-reading.jpg"/>
-          <h4>Solutions to Poverty</h4>
-          <span class="subhead visible-sm">40% of DC neighborhoods have less than half of their students scoring proficient in reading.</span>
-        </button>
-      </div>
-
-    <!-- </div> -->
+   
+    
+        
   </div>
 </div>
 <div class="posrel">
@@ -102,20 +79,6 @@ Many families that are in poverty are 'workless', in that no parent is working. 
 
 However, around 62% of children living in poverty live in a household where at least one parent works[3]. This is because low paid jobs, such as those on the minimum wage or part time or temporary contracts, are often not enough to provide an income above the 60% level.</p>
           </div>
-          <div id="two" class="panel-body">
-            <h4 class="lead">Percentage of Children in Single Mother Families</h4>
-            <p>Approximately 48% (almost 1 in 2) DC children live in families headed by single mothers. Approximately 30% of DC neighborhoods have more than 2 in 3 children living in households headed by single mothers and account for more than half of all children living in single mother households. Six Clusters with the highest number and more than 3 in 4 children living in single mother headed households are: Mayfair, Hillbrook, Mahaning Heights (92%), Historic Anacostia (86%), Douglas, Shipley Terrace (83%), Woodland/Fort Stanton, Garfield Heights, Knox Hill (81%), Congress Heights, Bellevue, Washington Highlands (80%), and Sheridan, Barry Farm, Buena Vista (78%).</p>
-          </div>
-          <div id="three" class="panel-body">
-            <h4 class="lead">Percentage of Students Proficient in Reading</h4>
-            <p>The 2013 DC CAS results in reading for neighborhoods by student’s residence indicates that 40% of DC neighborhoods have less than half of their students scoring proficient in reading. Half of all DC neighborhoods have less than 53% of their students proficient in reading. The highest performing three neighborhoods, which are clustered in Northwest DC, have 90% or more of their students proficient in reading. Friendship Heights, American University Park, Tenleytown neighborhood in NW DC has 94% of its students scoring proficient in reading while Historic Anacostia neighborhood in SE DC has 35% of its students scoring proficient in reading.</p>
-            <p>Additionally, a simplistic correlational analysis revealed that on average the higher the child poverty rate in the neighborhood, the lower the percentage of students proficient in reading. The median poverty rate was 52% for the ten neighborhoods with the lowest percentage of students proficient in reading in DC.</p>
-          </div>
-          <div id="four" class="panel-body">
-            <h4 class="lead">Percentage of Students Proficient in Math</h4>
-            <p>The 2013 DC CAS results in math for neighborhoods by student’s residence indicates that in 1 of 3 DC neighborhoods, less than half of the students are proficient in math. Overall, half of all DC neighborhoods have less than 55% of their students proficient in math. The highest performing four neighborhoods, which are clustered in Northwest DC have 90% or more of their students scoring proficient in Math. Friendship Heights, American University Park, Tenleytown neighborhood in NW DC has 94% of its students scoring proficient in math while Historic Anacostia neighborhood in SE DC has 40% of its students scoring proficient in math.</p>
-            <p>Additionally, a simplistic correlational analysis revealed that on average the higher the child poverty rate in the neighborhood, the lower the percentage of proficient students in math. The median poverty rate was 52% for the ten neighborhoods with the lowest percentage of students proficient in math in DC.</p>
-          </div>
         </div> <!-- narrative cards here -->
   <div id="main-container" class="posabs" style="position:relative;">
     <div class="menu-toggle posabs btn-danger">
@@ -138,9 +101,9 @@ However, around 62% of children living in poverty live in a household where at l
     <div class="panel-body">
       <p class="lead">
         <span id="visualized-metric">Total population</span><br />
-        <span id="visualized-measure">605,759</span>
+        <span id="visualized-measure"></span>
       </p>
-      <h4 class="neighborhood">Kingdom of Northumbria</h4>
+      <h4 class="neighborhood">North East England</h4>
       <table id="pop-info" class="table table-hover">
         <tr data-type="population_total_val">
           <td>Population (total)</td>
