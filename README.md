@@ -1,25 +1,14 @@
-# DC Action for Children 2.0 Visualization
+# North East Child Poverty Commission – Mapping Visualization
 
-See it here! http://datatools.dcactionforchildren.org
-
+See it here! https://datakind-uk.github.io/child-poverty-commission-dashboard/
 
 Development-related links:
 
-There's a Trello, which has this short link:
-http://bit.ly/DCA4C2VizTrello
-
-Nick's repo (this one) is master for this project:
-https://github.com/nickmcclellan/dcaction
-
-See also this org, perhaps:
-https://github.com/newamericafoundation/
+Hackpad here:
+https://hackpad.com/DataKind-UK-Autumn-DataDive-2014-sC97DPIbaQz
 
 Data documentation is building in this hackpad, with short link:
 http://bit.ly/DCA4C2VizData
-
-Kids Count useful links: http://datacenter.kidscount.org/data#DC
-
-DC KIDS COUNT Data Tool 10:  http://www.dcactionforchildren.org/dc-kids-count-data-tools
 
 MapBox guide to CartoCSS
 
