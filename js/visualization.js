@@ -270,7 +270,7 @@ function drawChoropleth(){
           .attr("id", "legend");
 
       overlay.draw = function() {
-        var data_values = _.compact(_.map(choropleth_data, function(d){ return parseFloat(d[currentMetric]); }));
+        var data_values = _.filter(_.map(choropleth_data, function(d){ return parseFloat(d[currentMetric]); }), function(d){ return !isNaN(d); });
 
         var projection = this.getProjection(),
         padding = 10;
@@ -320,10 +320,10 @@ function drawChoropleth(){
 } // drawChoropleth function
 
 function changeNeighborhoodData(new_data_column) {
-  var data_values = _.compact(_.map(choropleth_data, function(d){ return parseFloat(d[new_data_column]); }));
+  var data_values = _.filter(_.map(choropleth_data, function(d){ return parseFloat(d[new_data_column]); }), function(d){ return !isNaN(d); });
 
   // http://www.macwright.org/simple-statistics/#-jenks-data-number_of_classes-
-  var jenks = _.unique(_.compact(ss.jenks(data_values, 5)));
+  var jenks = _.filter(_.unique(ss.jenks(data_values, 5)), function(d){ return !isNaN(d); });
 
   var data_group = new_data_column.split('_')[0];
   var color_palette = (data_group in color_palettes) ? color_palettes[data_group] : color_palettes['default'];
@@ -367,9 +367,9 @@ function changeNeighborhoodData(new_data_column) {
 
   var legendText = function(d, jenks){
     if(d == _.min(jenks)) {
-      return legendNumber(d) + " and below";
+      return "Less than " + legendNumber(d);
     } else if(d > _.max(jenks)){
-      return "Above " + legendNumber(_.max(jenks));
+      return legendNumber(_.max(jenks)) + " and above";
     } else {
       return legendNumber(previousElement(d, jenks)) + " - " + legendNumber(d);
     }
